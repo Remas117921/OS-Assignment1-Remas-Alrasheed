@@ -1,58 +1,14 @@
-# Reflection Questions
+# Reflection - Remas Alrasheed
+*Student ID: 445052051*
 
-## Instructions
-Answer the following questions about your learning experience. Each answer should be **at least 5-7 sentences** and show your understanding.
+## Experience Summary
+During this assignment, I had the opportunity to bridge the gap between theoretical operating system concepts and practical Java implementation. Building a CPU Scheduler simulation helped me visualize how Round Robin scheduling works in real-time.
 
----
+## Key Learnings
+- *Process Management:* I understood how processes are queued and executed using time quantums.
+- *Context Switching:* I learned that switching between processes is a vital operation that has a cost, which I tracked using a counter.
+- *Java Threading:* Implementing the Runnable interface allowed me to see how threads simulate independent process execution.
+- *Version Control:* Using GitHub for this assignment improved my skills in managing code changes and documenting the development process through meaningful commits.
 
-## Question 1: What did you learn about multithreading?
-
-**Your Answer:**
-
-[Write your answer here. Discuss specific concepts like thread creation, thread states, how threads execute concurrently, what surprised you, etc.]
-
----
-
-## Question 2: What was the most challenging part of this assignment?
-
-**Your Answer:**
-
-[Describe the specific challenge. Was it understanding the code? Implementing a feature? Using Git? Explain what made it difficult and how it relates to the course concepts.]
-
----
-
-## Question 3: How did you overcome the challenges you faced?
-
-**Your Answer:**
-
-[Describe your problem-solving approach. Did you read documentation? Ask for help? Debug systematically? What resources did you use? What strategies worked?]
-
----
-
-## Question 4: How can you apply multithreading concepts in real-world applications?
-
-**Your Answer:**
-
-[Give specific examples from real applications you use (web browsers, games, mobile apps, etc.). Explain why threads are useful in those scenarios. Connect to what you learned in this assignment.]
-
----
-
-## Additional Reflections (Optional)
-
-### What would you like to learn more about?
-
-[Any topics related to threading, concurrency, or operating systems that you're curious about?]
-
----
-
-### How confident do you feel about multithreading concepts now?
-
-[Rate yourself and explain: Beginner / Intermediate / Confident]
-
-[Explain your rating - what do you understand well? What needs more practice?]
-
----
-
-### Feedback on the assignment
-
-[Any comments about the assignment? Was it helpful? Too easy/hard? Suggestions for improvement?]
+## Challenges
+One of the main challenges was accurately calculating the waiting time for each process as they yield and re-enter the queue. However, by tracking the start time of each execution burst, I was able to solve it successfully
