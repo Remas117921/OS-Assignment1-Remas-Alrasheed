@@ -1,121 +1,20 @@
-# Development Log
+# My Development Log - Remas Alrasheed
 
-## Instructions
-Document your development process as you work on the assignment. Add entries showing:
-- What you worked on
-- Problems you encountered
-- How you solved them
-- Time spent
-
-**Requirements**: Minimum 5 entries showing progression over time.
+### Entry 1 - March 26, 2026
+*What I did*: Set up the environment and initialized the project.
+*Details*:
+- Forked the repository and updated the student ID to 445052051.
+- Added the priority field to the Process class with random generation.
 
 ---
 
-## Example Entry Format:
+### Entry 2 - March 26, 2026
+*What I did*: Implemented core features and final results.
+*Details*:
+- Added a contextSwitches counter to track CPU movements between processes.
+- Calculated waitingTime for each process by tracking start and end times.
+- Created a final summary table to display Process name, Priority, and Waiting Time.
 
-### Entry 1 - [April 1, 2026, 2:30 PM]
-**What I did**: Forked the repository and set up my student ID
-
-**Details**: 
-- Created GitHub account with university email
-- Forked the starter repository
-- Changed student ID on line 92 to my actual ID (441234567)
-- Compiled and ran the program successfully
-
-**Challenges**: Had to install JDK first because javac wasn't recognized
-
-**Solution**: Downloaded JDK 17 from Oracle website and set PATH variable
-
-**Time spent**: 30 minutes
-
----
-
-## Your Development Log:
-
-### Entry 1 - [Date and Time]
-**What I did**: 
-
-**Details**: 
-
-**Challenges**: 
-
-**Solution**: 
-
-**Time spent**: 
-
----
-
-### Entry 2 - [Date and Time]
-**What I did**: 
-
-**Details**: 
-
-**Challenges**: 
-
-**Solution**: 
-
-**Time spent**: 
-
----
-
-### Entry 3 - [Date and Time]
-**What I did**: 
-
-**Details**: 
-
-**Challenges**: 
-
-**Solution**: 
-
-**Time spent**: 
-
----
-
-### Entry 4 - [Date and Time]
-**What I did**: 
-
-**Details**: 
-
-**Challenges**: 
-
-**Solution**: 
-
-**Time spent**: 
-
----
-
-### Entry 5 - [Date and Time]
-**What I did**: 
-
-**Details**: 
-
-**Challenges**: 
-
-**Solution**: 
-
-**Time spent**: 
-
----
-
-### Entry 6 - [Optional - Date and Time]
-**What I did**: 
-
-**Details**: 
-
-**Challenges**: 
-
-**Solution**: 
-
-**Time spent**: 
-
----
-
-## Summary
-
-**Total time spent on assignment**: [X hours]
-
-**Most challenging part**: 
-
-**Most interesting learning**: 
-
-**What I would do differently next time**: 
+*Challenges*: Locating the correct lines for context switching in the while loop.
+*Solution*: Carefully followed the code logic to find where the process is polled from the queue.
+*Time spent*: 2 hours
