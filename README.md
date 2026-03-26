@@ -1,3 +1,11 @@
+# My Project Submission - Remas Alrasheed
+*Student ID: 445052051*
+
+## Summary of Changes
+In this assignment, I implemented three main features to the CPU Scheduler:
+1. *Priority Field:* Added to the Process class.
+2. *Context Switch Counter:* To track CPU transitions.
+3. *Waiting Time Table:* To display final simulation results.
 # CS3701 Operating Systems - Assignment 1: Multithreading
 ## Round-Robin CPU Scheduler Simulation
 
