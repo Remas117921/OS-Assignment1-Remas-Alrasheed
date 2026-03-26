@@ -29,6 +29,9 @@ class Process implements Runnable {
     private int burstTime; // Total time the process requires to complete (in milliseconds)
     private int timeQuantum; // Time slice (time quantum) allowed per CPU access (in milliseconds)
     private int remainingTime; // Time left for the process to finish its execution
+    public int priority;       
+    long startTime;            
+    public int waitingTime = 0;
     public int priority
 
     // Constructor to initialize the process with name, burst time, and time quantum
@@ -36,15 +39,18 @@ class Process implements Runnable {
         this.name = name;
         this.burstTime = burstTime;
         this.timeQuantum = timeQuantum;
+                 
+        this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
         this.priority=new
             java.util.Random().nextInt(5)+1;
             
-        this.remainingTime = burstTime; // Initially, remaining time is equal to the burst time
+      this.startTime= System.currentTimeMillis;
     }
 
     // This method will be called when the thread for this process is started
     @Override
     public void run() {
+        this.waitingTime += (int) (System.currentTimeMillis() - this.startTime);
         // Simulate running for either the time quantum or remaining time, whichever is smaller
         int runTime = Math.min(timeQuantum, remainingTime); // Run for the smaller of the two times
         
@@ -85,6 +91,7 @@ class Process implements Runnable {
         
         // If the process still has remaining time, it yields CPU for the next process
         if (remainingTime > 0) {
+             this.startTime= System.currentTimeMillis;
             System.out.println(Colors.BLUE + "  ↻ " + Colors.CYAN + name + Colors.RESET + 
                               " yields CPU for context switch" + Colors.RESET);
         } else {
@@ -280,6 +287,11 @@ public class SchedulerSimulation {
         System.out.println(Colors.BOLD + Colors.BRIGHT_GREEN + 
                           "╚════════════════════════════════════════════════════════════════════════════════╝" + 
                            System.out.println(Colors.BRIGHT_YELLOW + "\n[!] Total context switches: " + contextSwitches + Colors.RESET);
+        System.out.println("\n" + Colors.BOLD + "--- Simulation Results ---" + Colors.RESET);
+        System.out.println(String.format("%-10s | %-10s | %-15s", "Process", "Priority", "Waiting Time"));
+        processMap.values().forEach(p -> 
+            System.out.println(String.format("%-10s | %-10d | %-10d ms", p.getName(), p.priority, p.waitingTime))
+        );
                           Colors.RESET + "\n");
     }
     
